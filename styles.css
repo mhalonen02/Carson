@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Light background color */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    background-color: #ffffff; /* White background for the game */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    max-width: 90%; /* Responsive width */
+    width: 60%; /* Fixed max width */
+    overflow: hidden; /* Prevent overflow */
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+#hintImage {
+    width: 80%; /* Full width of the container */
+    max-width: 80%; /* Allow it to fill the container */
+    max-height: 35vh; /* Limit maximum height to 70% of the viewport height */
+    object-fit: contain; /* Maintain aspect ratio and ensure the entire image is visible */
+    border-radius: 10px; /* Rounded corners for the image */
+    margin-bottom: 20px;
+}
+
+@media(max-width: 767px) {
+    #hintImage {
+        width: 80%; /* Full width for smaller screens */
+        max-height: 35vh; /* Limit maximum height to 50% of viewport height */
+    }
+}
+#options {
+    display: flex; /* Flexbox for buttons */
+    justify-content: space-between; /* Space between buttons */
+    margin: 20px 0;
+}
+
+button {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    border: none;
+    padding: 15px; /* Larger padding for bigger buttons */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    flex: 1; /* Allow buttons to grow equally */
+    margin: 0 5px; /* Margin between buttons */
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+#feedback {
+    margin-top: 15px;
+    font-weight: bold;
+    min-height: 20px; /* Ensure space for feedback */
+}
+
